@@ -1,0 +1,113 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  background: linear-gradient(341deg, #22c1c3 0%, #fdbb2d 100%);
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+nav {
+  background-color: rgb(39, 36, 36);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: space-around;
+  padding: 0.5em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  background-color: rgb(39, 36, 36);
+  border-radius: 10px;
+  color: white;
+  width: 80%;
+  margin: auto;
+  margin-top: 2em;
+  padding: 1em;
+}
+
+div {
+  justify-content: center;
+}
+
+.game,
+#grille {
+  display: grid;
+  grid-template-columns: repeat(4, 15%);
+  /* width: 800px; */
+  gap: 20px;
+  /* background: linear-gradient(341deg, #22c1c3 0%, #fdbb2d 100%); */
+}
+
+.case {
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(341deg, #22c1c3 0%, #fdbb2d 100%);
+}
+
+/* .case img{
+  margin:10px;
+} */
+
+.order1 {
+  order: 1;
+}
+
+.order2 {
+  order: 2;
+}
+
+.order3 {
+  order: 3;
+}
+
+.order4 {
+  order: 4;
+}
+
+.order5 {
+  order: 5;
+}
+
+.order6 {
+  order: 6;
+}
+
+.order7 {
+  order: 7;
+}
+
+.order8 {
+  order: 8;
+}
+
+.order9 {
+  order: 9;
+}
+
+.order10 {
+  order: 10;
+}
+
+.order11 {
+  order: 11;
+}
+
+.order12 {
+  order: 12;
+}
+
+
+.flipped{
+  pointer-events: none;
+}
