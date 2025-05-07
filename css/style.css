@@ -4,6 +4,7 @@
 
 html {
   background: linear-gradient(341deg, #22c1c3 0%, #fdbb2d 100%);
+  height: 100%;
 }
 
 h1 {
@@ -18,12 +19,19 @@ nav {
   flex-direction: row;
   width: 50%;
   justify-content: space-around;
-  padding: 0.5em;
+  align-items: center;
+  height: 3em;
+  /* padding: 0.5em; */
 }
 
 nav a {
   color: white;
   text-decoration: none;
+}
+
+nav a:hover {
+  background-color: black;
+  height: 3em;
 }
 
 main {
@@ -40,87 +48,110 @@ div {
   justify-content: center;
 }
 
+.accueil {
+  max-width: 800px;
+}
+
 .game,
 #grille {
   display: grid;
-  grid-template-columns: repeat(4, 15%);
-  /* width: 800px; */
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  /* background: linear-gradient(341deg, #22c1c3 0%, #fdbb2d 100%); */
 }
 
 .case {
-  width: 120px;
-  height: 120px;
   background: linear-gradient(341deg, #22c1c3 0%, #fdbb2d 100%);
 }
 
-/* .case img{
-  margin:10px;
-} */
-
-.order1 {
-  order: 1;
+.case img {
+  width: 95%;
 }
 
-.order2 {
-  order: 2;
+.game {
+  max-width: 600px;
+  margin: auto;
 }
 
-.order3 {
-  order: 3;
+.game img {
+  width: 95%;
 }
 
-.order4 {
-  order: 4;
-}
-
-.order5 {
-  order: 5;
-}
-
-.order6 {
-  order: 6;
-}
-
-.order7 {
-  order: 7;
-}
-
-.order8 {
-  order: 8;
-}
-
-.order9 {
-  order: 9;
-}
-
-.order10 {
-  order: 10;
-}
-
-.order11 {
-  order: 11;
-}
-
-.order12 {
-  order: 12;
-}
-
-
-.flipped{
+.flipped {
   pointer-events: none;
-  
 }
 
 .rotate {
-	transform: rotateY(180deg);
-	transition: all 0.3s ease-out;
-	transform-style: preserve-3d;
-
+  transform: rotateY(180deg);
+  transition: all 0.3s ease-out;
+  transform-style: preserve-3d;
 }
 
 .unrotate {
   transform: rotateY(360deg);
-	transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.play {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.messages {
+  margin: 1em;
+}
+
+.message,.count,.win{
+  margin:1em;
+}
+
+h3 {
+  margin: 0.5em;
+}
+
+#theme {
+  border-radius: 5px;
+}
+
+.formR {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.precision{
+  font-size: 0.8em;
+}
+
+button{
+  background-color: rgb(228, 236, 199);
+  border-radius: 10px;
+  padding:0.5em;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.register{
+  max-width: 800px;
+}
+
+input{
+  background-color: rgb(39, 36, 36);
+  border:none;
+  width: 100%;
+  color : yellow;
+  font-size: 16px;
+}
+
+.formR h2{
+  text-align: center;
+}
+
+.formR div{
+  padding:0.5em
 }

@@ -18,9 +18,9 @@ function mix() {
     let ord = Math.floor(Math.random() * 12) + 1;
     order.add(ord);
   }
-  console.log(order);
+  // console.log(order);
   place = [...order];
-  console.log(place);
+  // console.log(place);
 }
 
 /******* Initialisation du jeu *****/
@@ -31,9 +31,10 @@ function initialize() {
   imageSrc = 0;
   value = 0;
   count = 0;
+  divCount.innerHTML = `Nombre de coups joué(s) : ${count}`;
   nbPair = 0;
   message = "";
-  divCount.innerHTML = `${count}`;
+  divWin.innerHTML = `${message}`;
   returnedCard.splice(0, 2);
   placeCard.splice(0, 2);
 
@@ -58,10 +59,9 @@ function play() {
   caseNumber.forEach((card) => card.addEventListener("click", flip));
 }
 
-
-
 play();
 
+/*** je retourne les cartes qui ont été cliquées ***/
 function flip() {
   click++;
   this.classList.remove("unrotate");
@@ -69,8 +69,8 @@ function flip() {
     this.classList.add("rotate");
     value = this.getAttribute("value");
     let imageId = document.getElementById(value);
-    console.log(value);
-    console.log(returnedCard.length);
+    // console.log(value);
+    // console.log(returnedCard.length);
 
     if (count < 20) {
       if (returnedCard.length <= 2) {
@@ -80,39 +80,38 @@ function flip() {
           imageSrc = imageSrc - 6;
         }
         this.innerHTML = `<img src="medias/image${imageSrc}.jpg">`;
-                
       }
-      
     }
-    returnedCard.push(imageSrc);
-    placeCard.push(value);
-    console.log(returnedCard);
-    console.log(placeCard);
+    returnedCard.push(imageSrc); //insertion des cartes  retournées dans un array
+    placeCard.push(value); //insertion de l'emplacement des cartes  retournées dans un array
+    // console.log(returnedCard);
+    // console.log(placeCard);
     checkCards();
-    win()
-   
+    win();
   }
-   
 }
 
-function win(){
+// je vérifie si j'ai gagné et j'affiche un message si oui
+function win() {
   if (nbPair == 6) {
-    divWin.innerHTML="BRAVOO!";
+    message = "Bravooo! Vous avez gagné la partie";
+    divWin.innerHTML = `${message}`;
   }
 }
 
-
-
+// je compare les cartes retournées et j'incrémente le nombre de coups
 function checkCards() {
   if (returnedCard.length === 2) {
     count++;
-    divCount.innerHTML = `${count}`;
+    divCount.innerHTML = `Nombre de coups joué(s) : ${count}`;
+    //si les cartes retournées sont différentes je les retourne au bout de 1s et je vide les arrays des crates retournées
     if (returnedCard[0] != returnedCard[1]) {
-      console.log(returnedCard[0]);
-      console.log(caseNumber);
+      // console.log(returnedCard[0]);
+      // console.log(caseNumber);
       setTimeout(backCard, 1000);
       returnedCard.splice(0, 2);
     } else {
+      //si les crates sont identiques je leur attribue la class "flipped" afin de ne plus pouvoir les cliquer
       for (let card of caseNumber) {
         if (
           card.getAttribute("value") == placeCard[0] ||
@@ -124,18 +123,17 @@ function checkCards() {
       placeCard.splice(0, 2);
       click = 0;
       nbPair++;
-      console.log(nbPair);
-      
-      
+      // console.log(nbPair);
     }
   }
 }
 
+// je retourne les paires différentes en récupérant leur emplacement dans l'array "placeCard"
 function backCard() {
   for (let card of caseNumber) {
-    console.log("placeC0 :" + placeCard[0]);
-    console.log("placeC1 :" + placeCard[1]);
-    console.log("value : " + card.getAttribute("value"));
+    // console.log("placeC0 :" + placeCard[0]);
+    // console.log("placeC1 :" + placeCard[1]);
+    // console.log("value : " + card.getAttribute("value"));
     if (
       card.getAttribute("value") == placeCard[0] ||
       card.getAttribute("value") == placeCard[1]
@@ -154,6 +152,5 @@ function backCard() {
 document.addEventListener("keydown", (event) => {
   if (event.code == "Space") {
     initialize();
-    // mix();
   }
 });

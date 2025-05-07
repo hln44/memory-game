@@ -11,16 +11,17 @@
     <header>
       <h1>ENI - MEMORY - Accueil</h1>
       <nav>
-        <a href="index.html">Accueil</a>
-        <a href="register.html">S'inscrire</a>
-        <a href="login.html">Se connecter</a>
-        <a href="profil.html">Profil</a>
-        <a href="play.html">Jouer</a>
+        <a href="index.html" target="_blank">Accueil</a>
+        <a href="register.html" target="_blank">S'inscrire</a>
+        <a href="login.html" target="_blank">Se connecter</a>
+        <a href="profil.html" target="_blank">Profil</a>
+        <a href="play.html" target="_blank">Jouer</a>
       </nav>
     </header>
 
     <main>
       <form action="" method="get">
+        <h3>Choix du Memory</h3>
         <select name="theme" id="theme">
           <option value="Animaux">Animaux</option>
           <option value="Légumes">Légumes</option>
@@ -29,26 +30,55 @@
         </select>
       </form>
 
-      <div class="count"></div>
-      <div class="win"></div>
+      <div class="play">
+        <div class="messages">
+          <div class="message">
+            <p>Tentez de gagner avec le moins d'essais possible.</p>
+            <p>Appuyer sur la <strong>barre d'espace</strong> pour relancer le jeu.</p>
+          </div>
+          <div class="count"></div>
+          <div class="win"></div>
+        </div>
 
-      
-
-      <div id="grille">
-        <div class="case" value="1"><img id="1" src="medias/image0.png" alt=""></div>
-        <div class="case" value="2"><img id="2" src="medias/image0.png" alt=""></div>
-        <div class="case" value="3"><img id="3" src="medias/image0.png" alt=""></div>
-        <div class="case" value="4"><img id="4" src="medias/image0.png" alt=""></div>
-        <div class="case" value="5"><img id="5" src="medias/image0.png" alt=""></div>
-        <div class="case" value="6"><img id="6" src="medias/image0.png" alt=""></div>
-        <div class="case" value="7"><img id="7" src="medias/image0.png" alt=""></div>
-        <div class="case" value="8"><img id="8" src="medias/image0.png" alt=""></div>
-        <div class="case" value="9"><img id="9" src="medias/image0.png" alt=""></div>
-        <div class="case" value="10"><img id="10" src="medias/image0.png" alt=""></div>
-        <div class="case" value="11"><img id="11" src="medias/image0.png" alt=""></div>
-        <div class="case" value="12"><img id="12" src="medias/image0.png" alt=""></div>
+        <div id="grille">
+          <div class="case" value="1">
+            <img id="1" src="medias/image0.png" alt="" />
+          </div>
+          <div class="case" value="2">
+            <img id="2" src="medias/image0.png" alt="" />
+          </div>
+          <div class="case" value="3">
+            <img id="3" src="medias/image0.png" alt="" />
+          </div>
+          <div class="case" value="4">
+            <img id="4" src="medias/image0.png" alt="" />
+          </div>
+          <div class="case" value="5">
+            <img id="5" src="medias/image0.png" alt="" />
+          </div>
+          <div class="case" value="6">
+            <img id="6" src="medias/image0.png" alt="" />
+          </div>
+          <div class="case" value="7">
+            <img id="7" src="medias/image0.png" alt="" />
+          </div>
+          <div class="case" value="8">
+            <img id="8" src="medias/image0.png" alt="" />
+          </div>
+          <div class="case" value="9">
+            <img id="9" src="medias/image0.png" alt="" />
+          </div>
+          <div class="case" value="10">
+            <img id="10" src="medias/image0.png" alt="" />
+          </div>
+          <div class="case" value="11">
+            <img id="11" src="medias/image0.png" alt="" />
+          </div>
+          <div class="case" value="12">
+            <img id="12" src="medias/image0.png" alt="" />
+          </div>
+        </div>
       </div>
-
     </main>
 
     <script src="js/functions.js"></script>
