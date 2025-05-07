@@ -27,7 +27,7 @@
             <label for="name">Nom d'utilisateur</label>
           </div>
 
-          <div>
+          <div class="input">
             <input
               class="input"
               type="text"
@@ -35,14 +35,18 @@
               name="name"
               placeholder="3 caractères minimum"
             />
+            <img class="errName hidden" src="medias/error.png" alt="erreur" />
           </div>
           <hr />
+          <p class="errNameP hidden">
+            Choisissez un pseudo contenant au moins 3 caractères
+          </p>
 
           <div class="label">
             <label for="email">Entrez votre email</label>
           </div>
 
-          <div>
+          <div class="input">
             <input
               class="input"
               type="email"
@@ -50,14 +54,16 @@
               name="email"
               placeholder="Votre email"
             />
+            <img class="errMail hidden" src="medias/error.png" alt="erreur" />
           </div>
           <hr />
+          <p class="errMailP hidden">Rentrez un email valide</p>
 
           <div class="label">
             <label for="mdp">Mot de passe</label>
           </div>
 
-          <div>
+          <div class="input">
             <input
               class="input"
               type="password"
@@ -65,26 +71,38 @@
               name="mdp"
               placeholder="Votre mot de passe"
             />
+            <img class="errMdp hidden" src="medias/error.png" alt="erreur" />
           </div>
           <hr />
-          <p class="precision">
+          <p class="errMdpP hidden">
             Au moins un symbole, un chiffre, ainsi que 6 caractères minimum.
           </p>
+          <div class="curseur">
+            <div class="faible hidden">faible</div>
+            <div class="moyen hidden">moyen</div>
+            <div class="fort hidden">fort</div>
+          </div>
 
           <div class="label">
             <label for="confmdp">Confirmez le mot de passe</label>
           </div>
 
-          <div>
+          <div class="input">
             <input
               class="input"
               type="password"
               id="confmdp"
               name="confmdp"
-              placeholder="Confirmez le  mot de passe"
+              placeholder="Confirmez le mot de passe"
+            />
+            <img
+              class="errConfMdp hidden"
+              src="medias/error.png"
+              alt="erreur"
             />
           </div>
           <hr />
+          <p class="errConfMdpP hidden">Confirmation différente du mot de passe déclaré</p>
 
           <div class="buttons">
             <button id="createAccount">Création du compte</button>

@@ -17,7 +17,8 @@ nav {
   border-radius: 10px;
   display: flex;
   flex-direction: row;
-  width: 50%;
+  width: 95%;
+  margin:auto;
   justify-content: space-around;
   align-items: center;
   height: 3em;
@@ -154,4 +155,46 @@ input{
 
 .formR div{
   padding:0.5em
+}
+
+.errMailP,.errNameP,.errMdpP,.errConfMdpP{
+  color: rgb(202, 51, 76)
+}
+
+.input{
+  display: flex;
+}
+
+.formR img{
+  width:20px;
+}
+
+.hidden{
+visibility: hidden;
+}
+
+.curseur{
+  display: flex;
+  justify-content: center;
+  gap:10px
+  
+}
+
+.faible,.moyen,.fort{
+  border-top: 5px solid rgb(196, 123, 13);
+  border-radius: 3px;
+  width:100px;
+  text-align: center;
+}
+
+.moyen{
+  border-color: yellow;
+}
+
+.fort{
+  border-color: rgb(6, 206, 6);
+}
+
+.curseur.hidden{
+  display:none;
 }
