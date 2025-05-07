@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>S'inscrire</title>
+  </head>
+  <body>
+    <header>
+      <h1>ENI - MEMORY - Accueil</h1>
+      <nav>
+        <a href="index.html" target="_blank">Accueil</a>
+        <a href="register.html" target="_blank">S'inscrire</a>
+        <a href="login.html" target="_blank">Se connecter</a>
+        <a href="profil.html" target="_blank">Profil</a>
+        <a href="play.html" target="_blank">Jouer</a>
+      </nav>
+    </header>
+
+    <main class="register">
+      <div class="formR">
+        <form class="form" action="" method="">
+          <h2>Inscrivez-vous</h2>
+
+          <div class="label">
+            <label for="name">Nom d'utilisateur</label>
+          </div>
+
+          <div>
+            <input
+              class="input"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="3 caractères minimum"
+            />
+          </div>
+          <hr />
+
+          <div class="label">
+            <label for="email">Entrez votre email</label>
+          </div>
+
+          <div>
+            <input
+              class="input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Votre email"
+            />
+          </div>
+          <hr />
+
+          <div class="label">
+            <label for="mdp">Mot de passe</label>
+          </div>
+
+          <div>
+            <input
+              class="input"
+              type="password"
+              id="mdp"
+              name="mdp"
+              placeholder="Votre mot de passe"
+            />
+          </div>
+          <hr />
+          <p class="precision">
+            Au moins un symbole, un chiffre, ainsi que 6 caractères minimum.
+          </p>
+
+          <div class="label">
+            <label for="confmdp">Confirmez le mot de passe</label>
+          </div>
+
+          <div>
+            <input
+              class="input"
+              type="password"
+              id="confmdp"
+              name="confmdp"
+              placeholder="Confirmez le  mot de passe"
+            />
+          </div>
+          <hr />
+
+          <div class="buttons">
+            <button id="createAccount">Création du compte</button>
+            <button id="cancelAccount">Annuler</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="js/register.js"></script>
+  </body>
+</html>
