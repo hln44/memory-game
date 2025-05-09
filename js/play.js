@@ -10,6 +10,14 @@ let value = 0;
 let click = 0;
 let nbPair = 0;
 let message = "";
+const imageLegend = [
+  "image ane",
+  "image éléphant",
+  "image coq",
+  "image chien",
+  "image chat",
+  "image cochon",
+];
 
 /**** Mélange des cartes et insertion dans un array pour conserver leur position ****/
 function mix() {
@@ -48,7 +56,8 @@ function initialize() {
   /**** Retournement du jeu ****/
   for (let i = 1; i < 13; i++) {
     caseNumber.forEach(
-      (card) => (card.innerHTML = `<img src="medias/image0.png">`)
+      (card) =>
+        (card.innerHTML = `<img src="medias/image0.png" alt="dos carte">`)
     );
   }
 }
@@ -67,6 +76,7 @@ function flip() {
   this.classList.remove("unrotate");
   if (click <= 2) {
     this.classList.add("rotate");
+    this.classList.add("flipped");
     value = this.getAttribute("value");
     let imageId = document.getElementById(value);
     // console.log(value);
@@ -79,7 +89,10 @@ function flip() {
         if (imageSrc > 6) {
           imageSrc = imageSrc - 6;
         }
-        this.innerHTML = `<img src="medias/image${imageSrc}.jpg">`;
+
+        this.innerHTML = `<img src="medias/image${imageSrc}.jpg" alt="${
+          imageLegend[imageSrc - 1]
+        }">`;
       }
     }
     returnedCard.push(imageSrc); //insertion des cartes  retournées dans un array
@@ -108,17 +121,11 @@ function checkCards() {
     if (returnedCard[0] != returnedCard[1]) {
       // console.log(returnedCard[0]);
       // console.log(caseNumber);
+
       setTimeout(backCard, 1000);
+
       returnedCard.splice(0, 2);
     } else {
-      //si les crates sont identiques je leur attribue la class "flipped" afin de ne plus pouvoir les cliquer
-      for (let card of caseNumber) {
-        if (
-          card.getAttribute("value") == placeCard[0] ||
-          card.getAttribute("value") == placeCard[1]
-        )
-          card.classList.add("flipped");
-      }
       returnedCard.splice(0, 2);
       placeCard.splice(0, 2);
       click = 0;
@@ -139,8 +146,8 @@ function backCard() {
       card.getAttribute("value") == placeCard[1]
     ) {
       card.classList.remove("rotate");
-
-      card.innerHTML = `<img src="medias/image0.png">`;
+      card.classList.remove("flipped");
+      card.innerHTML = `<img src="medias/image0.png" alt="dos carte">`;
       card.classList.add("unrotate");
     }
   }

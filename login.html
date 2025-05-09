@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Se connecter</title>
+</head>
+<body>
+    <body>
+    <header>
+      <h1>ENI - MEMORY - Se connecter</h1>
+      <nav>
+        <a href="index.html" target="_blank">Accueil</a>
+        <a href="register.html" target="_blank">S'inscrire</a>
+        <a href="login.html" target="_blank">Se connecter</a>
+        <a href="profil.html" target="_blank">Profil</a>
+        <a href="play.html" target="_blank">Jouer</a>
+      </nav>
+    </header>
+
+    
+<main class="connect">
+      <div class="formC">
+        <form class="formCo" action="" method="">
+          <h2>Connectez-vous</h2>
+
+          <div class="label">
+            <label for="name">Nom d'utilisateur</label>
+          </div>
+
+          <div class="input">
+            <input
+              class="input"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Votre identifiant utilisateur"
+            />
+          </div>
+          <hr />        
+
+          <div class="label">
+            <label for="email">Entrez votre email</label>
+          </div>
+
+          <div class="input">
+            <input
+              class="input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Votre email"
+            />
+
+          </div>
+          <hr />
+          <p class="errMailP hidden">Rentrez un email valide</p>
+
+          <div class="label">
+            <label for="mdp">Mot de passe</label>
+          </div>
+
+          <div class="input">
+            <input
+              class="input"
+              type="password"
+              id="mdp"
+              name="mdp"
+              placeholder="Votre mot de passe"
+            />    
+          </div>
+          <hr />         
+
+          <div class="buttons">
+            <button id="connect">Connexion</button>
+            <button id="cancelConnect">Annuler</button>
+          </div>
+
+    </main>
+
+    
+    <script src="js/login.js"></script>
+    
+</body>
+</html>

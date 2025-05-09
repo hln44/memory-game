@@ -1,0 +1,104 @@
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+<header>
+	<a href='index.html'>Jeu de mémoire</a>
+</header>
+<div class='container top'>
+	<div>
+		<br>Nombre de coups: <span id="clickcount">0</span>
+		<br>Temps : <input type="text" name="chronotime" id="chronotime" value="00:00:00"/>
+	</div>
+	<div>
+		<p>Meilleur score : <span id="best">0</span> coups
+			<br>Meilleur temps : <span id="bestchrono">00:00:000</span></p>
+	</div>
+</div>
+
+<!-- Modal results -->
+<div id="resultats" class="modal">
+	<div class="modal-content">
+		<span class="close">&times;</span>
+		<p></p>
+		<button type="button" id="rejouer"> Rejouer </button>
+	</div>
+</div>
+<br>
+
+<!-- Deck -->
+<section class='deck container flex'>
+	<div class='card'>
+		<div class='inner' value="0">
+			<p class='front'>&#10068;</p>
+			<p class='back back1'></p>
+		</div>
+	</div>
+	<div class='card'>
+		<div class='inner' value="1">
+			<p class='front'>&#10068;</p>
+			<p class='back back2'></p>
+		</div>
+	</div>
+	<div class='card'>
+		<div class='inner' value="2">
+			<p class='front'>&#10068;</p>
+			<p class='back back3'></p>
+		</div>
+	</div>
+	<div class='card'>
+		<div class='inner' value="3">
+			<p class='front'>&#10068;</p>
+			<p class='back back4'></p>
+		</div>
+	</div>
+	<div class='card'>
+		<div class='inner' value="4">
+			<p class='front'>&#10068;</p>
+			<p class='back back5'></p>
+		</div>
+	</div>
+	<div class='card'>
+		<div class='inner' value="5">
+			<p class='front'>&#10068;</p>
+			<p class='back back6'></p>
+		</div>
+	</div>
+	<div class='card'>
+		<div class='inner' value="6">
+			<p class='front'>&#10068;</p>
+			<p class='back back7'></p>
+		</div>
+	</div>
+	<div class='card'>
+		<div class='inner' value="7">
+			<p class='front'>&#10068;</p>
+			<p class='back back8'></p>
+		</div>
+	</div>
+	<div class='card'>
+		<div class='inner' value="8">
+			<p class='front'>&#10068;</p>
+			<p class='back back9'></p>
+		</div>
+	</div>
+	<div class='card'>
+		<div class='inner' value="9">
+			<p class='front'>&#10068;</p>
+			<p class='back back10'></p>
+		</div>
+	</div>
+	<div class='card'>
+		<div class='inner' value="10">
+			<p class='front'>&#10068;</p>
+			<p class='back back11'></p>
+		</div>
+	</div>
+	<div class='card'>
+		<div class='inner' value="11">
+			<p class='front'>&#10068;</p>
+			<p class='back back12'></p>
+		</div>
+	</div>
+</section>
+<br>
+<center>
+	<button type="button" id="playagain">Recommencer</button>
+</center>

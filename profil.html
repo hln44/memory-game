@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Mon profil</title>
+  </head>
+  <body>
+    <header>
+      <h1>ENI - MEMORY - Mon profil</h1>
+      <nav>
+        <a href="index.html" target="_blank">Accueil</a>
+        <a href="register.html" target="_blank">S'inscrire</a>
+        <a href="login.html" target="_blank">Se connecter</a>
+        <a href="profil.html" target="_blank">Profil</a>
+        <a href="play.html" target="_blank">Jouer</a>
+      </nav>
+    </header>
+
+    <main class="profil">
+      <form class="form" action="" method="">
+        <div class="imgProfil">
+          <div>
+            <h2>Profil</h2>
+          </div>
+
+          <div>
+            <img src="medias/profil.webp" alt="photo profil inconnu" />
+          </div>
+        </div>
+
+        <div class="label">
+          <label for="name">Nom d'utilisateur</label>
+        </div>
+
+        <div class="inputName">
+          <input class="input" type="text" id="name" name="name" />
+        </div>
+        <hr />
+
+        <div class="label">
+          <label for="email">Email</label>
+        </div>
+
+        <div class="inputMail">
+          <input class="input" type="email" id="email" name="email" />
+        </div>
+        <hr />
+      </form>
+
+      <form class="memoryChoice" action="" method="get">
+        <h3>Choix du Memory</h3>
+        <select name="theme" id="theme">
+          <option value="Animaux" selected>Animaux</option>
+          <!-- <option value="Légumes">Légumes</option>
+          <option value="Animaux domestiques">Animaux domestiques</option>
+          <option value="Animaux animés">Animaux animés</option> -->
+        </select>
+      </form>
+
+      <div id="grilleProfil">
+        <div class="case" value="1">
+          <img id="1" src="medias/image0.png" alt="dos carte" />
+        </div>
+        <div class="case" value="2">
+          <img id="2" src="medias/image0.png" alt="dos carte" />
+        </div>
+        <div class="case" value="3">
+          <img id="3" src="medias/image0.png" alt="dos carte" />
+        </div>
+        <div class="case" value="4">
+          <img id="4" src="medias/image0.png" alt="dos carte" />
+        </div>
+        <div class="case" value="5">
+          <img id="5" src="medias/image0.png" alt="dos carte" />
+        </div>
+        <div class="case" value="6">
+          <img id="6" src="medias/image0.png" alt="dos carte" />
+        </div>
+        <div class="case" value="7">
+          <img id="7" src="medias/image0.png" alt="dos carte" />
+        </div>
+        <div class="case" value="8">
+          <img id="8" src="medias/image0.png" alt="dos carte" />
+        </div>
+        <div class="case" value="9">
+          <img id="9" src="medias/image0.png" alt="dos carte" />
+        </div>
+        <div class="case" value="10">
+          <img id="10" src="medias/image0.png" alt="dos carte" />
+        </div>
+        <div class="case" value="11">
+          <img id="11" src="medias/image0.png" alt="dos carte" />
+        </div>
+        <div class="case" value="12">
+          <img id="12" src="medias/image0.png" alt="dos carte" />
+        </div>
+      </div>
+
+      <form class="memorySize" action="" method="get">
+        <h3>Taille du Memory</h3>
+        <select name="taille" id="taille">
+          <option value="4*3" selected>4*3</option>
+          <!-- <option value="Légumes">Légumes</option>
+          <option value="Animaux domestiques">Animaux domestiques</option>
+          <option value="Animaux animés">Animaux animés</option> -->
+        </select>
+      </form>
+      <div class="btn">
+        <button class="options">Enregistrez Option</button>
+      </div>
+    </main>
+
+    <script src="js/profil.js"></script>
+  </body>
+</html>
