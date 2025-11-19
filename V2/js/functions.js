@@ -22,7 +22,6 @@ function mix() {
 mix();
 
 function initialize() {
-  // mix();
   count = 0;
   divCount.innerHTML = `${count}`;
   returnedCard.splice(0, 2);
@@ -35,18 +34,8 @@ function initialize() {
 
 for (let i = 1; i < 13; i++){   
   caseNumber.forEach((card) => 
-    card.innerHTML= `<img src="medias/image0.png">`)
-  
-  // getAttribute("value").innerHTML= `<img src="medias/image0.png">`;
-}
-  // for (let i = 1; i < 13; i++) {
-  //   let id = document.getElementById(i);
-  //   console.log(id);
-    
-  //   id.innerHTML = `<img src="medias/image0.png">`;
-    
+    card.innerHTML= `<img src="medias/image0.png">`)   
   }
-
 
 initialize();
 
@@ -57,14 +46,12 @@ function play() {
 play();
 
 function flip() {
-  // console.log(this.getAttribute("value"))
   click++;
   this.classList.remove("unrotate");
   if (click <= 2) {
     this.classList.add("rotate");
     value = this.getAttribute("value");
     let imageId = document.getElementById(value);
-    // console.log(imageId.src);
     console.log(value);
     console.log(returnedCard.length);
 
@@ -84,7 +71,6 @@ function flip() {
         console.log(placeCard);
       }
       checkCards();
-      // click = 0;
     }
   }
 }
@@ -99,7 +85,6 @@ function checkCards() {
       setTimeout(backCard, 1000);
       returnedCard.splice(0, 2);
     } else {
-      // this.classList.add("pointerEvent")
       for (let card of caseNumber) {
         if (
           card.getAttribute("value") == placeCard[0] ||
@@ -114,24 +99,7 @@ function checkCards() {
   }
 }
 
-// let cardValue = false;
-// function getCardValue() {
-//   for (let card of caseNumber) {
-//     if (
-//       card.getAttribute("value") == placeCard[0] ||
-//       card.getAttribute("value") == placeCard[1]
-//     ) {
-//       cardValue= true;
-//     }
-//   }
-//   return cardValue;
-// }
-
 function backCard() {
-  // caseNumber.forEach((card) => {
-  // console.log(placeCard[0]);
-  // console.log(placeCard[1]);
-
   for (let card of caseNumber) {
     console.log("placeC0 :" + placeCard[0]);
     console.log("placeC1 :" + placeCard[1]);
@@ -144,10 +112,6 @@ function backCard() {
 
       card.innerHTML = `<img src="medias/image0.png">`;
       card.classList.add("unrotate");
-      //  placeCard.splice(0,1);
-      // } else if (card.getAttribute("value") == placeCard[0]){
-      //    card.innerHTML = `<img src="medias/image0.png">`;
-      //    placeCard.splice(0, 2);
     }
   }
   placeCard.splice(0, 2);
@@ -159,3 +123,4 @@ document.addEventListener("keydown", (event) => {
     initialize();
   }
 });
+}
