@@ -32,10 +32,13 @@ function initialize() {
     card.classList.remove("rotate");
   }
 
-for (let i = 1; i < 13; i++){   
-  caseNumber.forEach((card) => 
-    card.innerHTML= `<img src="medias/image0.png">`)   
+  for (let i = 1; i < 13; i++){   
+    caseNumber.forEach((card) => 
+      card.innerHTML= `<img src="medias/image0.png">`)
+
   }
+}
+
 
 initialize();
 
@@ -123,4 +126,3 @@ document.addEventListener("keydown", (event) => {
     initialize();
   }
 });
-}
